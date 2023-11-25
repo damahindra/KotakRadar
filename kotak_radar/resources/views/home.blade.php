@@ -28,12 +28,15 @@
         </div>
     </nav>
     @foreach ($posts as $post)
+    @php
+        $user = App\Models\User::find($post->user_id);
+    @endphp
     <div class="bg-[#f1f1f1] grid h-full mb-4 rounded rounded-lg mt-4 ml-24 mr-24">
         <div class="align-middle flex justify-between pt-5 px-7">
             <div class="flex gap-4">
                 <img src="https://rvs-accountable-social-media-feed.vercel.app/assets/User Avatar 05.svg" alt="">
                 <div class="leading-5">
-                    <h4 class="font-bold text-black">{{ $post->recipient }}</h4>
+                    <h4 class="font-bold text-black">{{ $user->name }} to {{ $post->recipient }}</h4>
                     <span>{{ $post->created_at }}</span>
                 </div>
             </div>
