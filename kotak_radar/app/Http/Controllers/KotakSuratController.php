@@ -25,18 +25,26 @@ class KotakSuratController extends Controller
 
         // define current user
         $user = auth()->user();
-
+        $val_post = $request->validated();
         // create post
-        $post = Post::create($request->validated());
+        $post = Post::create([
+            'user_id' => $user->id,
+            'recipient' => $request['recipient'],
+            'topic' => $request['topic'],
+            'content' => $request['content'],
+        ]);
         
-        // save post to user
-        $user->post()->save($post);
+        // // associate post with user
+        // $post->user()->associate($user);
+
+        // // save post to user
+        // $user->post()->save($post);
 
         return redirect('/mail');
     }
 
     public function fetch() {
-        $posts = Post::all();
+        $posts = Post::where('user_id', auth()->user()->id)->get();
         return view('kotakSurat', ['posts' => $posts]);
     }
 }
