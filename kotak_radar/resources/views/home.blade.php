@@ -5,21 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ URL::asset('css/login.css'); }} ">
-    <title>Document</title>
+    <title>Kotak Radar</title>
 </head>
 
 <body>
-    <div class="topnav">
+    <nav class="topnav">
         <div>
-            <a href="">Beranda</a>
-            <a href="">Kuis</a>
-            <a href="">Kotak Surat</a>
+            <a class="beranda" href="/">Beranda</a>
+            <a href="/kuis">Kuis</a>
+            <a href="/kotaksurat">Kotak Surat</a>
         </div>
         <div class="button">
             <a href="/register" class="sign">Sign up</a>
             <a href="/login" class="login">Log in</a>
         </div>
-    </div>
+    </nav>
+
+
 </body>
 
 </html>

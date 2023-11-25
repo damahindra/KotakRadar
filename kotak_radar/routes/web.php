@@ -23,3 +23,15 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('register');
 });
+
+Route::get('/kotaksurat', function () {
+    return view('kotakSurat');
+});
+
+Route::get('/tambahsurat', function () {
+    return view('tambahSurat');
+});
+
+Route::get('/kuis', function () {
+    return view('kuis');
+});
