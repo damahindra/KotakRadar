@@ -16,31 +16,32 @@
             <p>Sign In to your account</p>
         </div>
 
-        <div class="input-group">
-            <input type="text" id="username" class="input-field" placeholder="Username">
-        </div>
-
-        <div class="input-group">
-            <input type="password" id="password" class="input-field" placeholder="Password">
-        </div>
-
-        <div class="input-group row">
-
-            <div class="row">
-                <input type="checkbox" id="remember" hidden>
-                <label for="remember" class="custom-checkbox"></label>
-                <label for="remember">Remember me?</label>
+        <form method="POST" action="{{route('login.perform')}}">
+            @csrf
+            <div class="input-group">
+                <input type="text" name="username" class="input-field" placeholder="Username">
             </div>
 
-            <div class="row">
-                <a href="#" target="_blank">Forgot password?</a>
+            <div class="input-group">
+                <input type="password" name="password" class="input-field" placeholder="Password">
             </div>
-        </div>
 
+            <div class="input-group row">
 
-        <div class="input-group">
-            <button onclick="window.location.href='/'">Login <i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+                <div class="row">
+                    <input type="checkbox" name="remember" hidden>
+                    <label for="remember" class="custom-checkbox"></label>
+                    <label for="remember">Remember me?</label>
+                </div>
+
+                <div class="row">
+                    <a href="#" target="_blank">Forgot password?</a>
+                </div>
+            </div>
+            <div class="input-group">
+                <button onclick="window.location.href='/'">Login <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </form>
 
     </div>
 

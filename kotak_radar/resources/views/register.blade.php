@@ -16,21 +16,24 @@
             <p>Register new account</p>
         </div>
 
-        <div class="input-group">
-            <input type="text" id="username" class="input-field" placeholder="Username">
-        </div>
+        <form method="POST" action="{{route('register.perform')}}">
+            @csrf
 
-        <div class="input-group">
-            <input type="password" id="password" class="input-field" placeholder="Password">
-        </div>
+            <div class="input-group">
+                <input type="text" name="email" class="input-field" placeholder="Email">
+            </div>
 
-        <div class="input-group">
-            <input type="text" id="name" class="input-field" placeholder="Name">
-        </div>
+            <div class="input-group">
+                <input type="password" name="password" class="input-field" placeholder="Password">
+            </div>
 
-        <div class="input-group">
-            <button onclick="window.location.href='/login'">Register<i class="fa-solid fa-arrow-right"></i></button>
-        </div>
+            <div class="input-group">
+                <input type="text" name="name" class="input-field" placeholder="Name">
+            </div>
+            <div class="input-group">
+                <button onclick="window.location.href='/login'">Register<i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </form>
 
     </div>
 
