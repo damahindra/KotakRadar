@@ -125,3 +125,6 @@
     cursor: pointer;
   }
 
+#mobile-nav.active {
+    display: block;
+}
