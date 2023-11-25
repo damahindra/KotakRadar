@@ -18,7 +18,7 @@
             <a href="/kuis">Kuis</a>
             <a href="/kotaksurat">Kotak Surat</a>
             @csrf
-            <a href="logout">Logout</a>
+            <a href="/logout">Logout</a>
         </div>
         <div class="button">
 

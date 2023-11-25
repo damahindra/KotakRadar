@@ -26,7 +26,15 @@
     </nav>
     <div class="title">
         <h2>Kotak Surat</h2>
-        <button onclick="window.location.href='/tambahsurat'">Tambahkan surat</button>
+        <button onclick="window.location.href='/addmail'">Tambahkan surat</button>
     </div>
+
+    @foreach ($posts as $post)
+        <div class='surat'>
+            <h2>{{ $post->topic }}</h2>
+            <p>{{ $post->recipient}}</p>
+            <p>{{ $post->content }}</p>
+        </div>
+    @endforeach
 </body>
 </html>

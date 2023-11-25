@@ -29,26 +29,15 @@ class LoginController extends Controller
     {
         $credentials = $request->getCredentials();
 
-        if (!Auth::attempt($credentials)) {
-            return redirect()->to('login')->withErrors(trans('auth.failed'));
+        if (Auth::attempt($credentials)) {
+
+            $request->session()->regenerate();
+            
+            return redirect('/home');
         }
-
-        $user = Auth::user();
-
-        return $this->authenticated($request, $user);
-    }
-
-
-    /**
-     * Handle response after user authenticated
-     * 
-     * @param Request $request
-     * @param Auth $user
-     * 
-     * @return \Illuminate\Http\Response
-     */
-    protected function authenticated(Request $request, $user) 
-    {
-        return redirect()->intended();
+ 
+        return back()->withErrors([
+            'email' => 'The provided credentials do not match our records.',
+        ]);
     }
 }
