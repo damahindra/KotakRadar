@@ -19,7 +19,7 @@
         <form method="POST" action="{{route('login.perform')}}">
             @csrf
             <div class="input-group">
-                <input type="text" name="username" class="input-field" placeholder="Username">
+                <input type="text" name="email" class="input-field" placeholder="Email">
             </div>
 
             <div class="input-group">

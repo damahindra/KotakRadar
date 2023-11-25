@@ -20,7 +20,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
      */
     Route::get('/', 'HomeController@index')->name('home.index');
 
-<<<<<<< HEAD
     Route::group(['middleware' => ['guest']], function() {
         /**
          * Register Routes
@@ -43,20 +42,3 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/logout', 'LogoutController@perform')->name('logout.perform');
     });
 });
-=======
-Route::get('/register', function () {
-    return view('register');
-});
-
-Route::get('/kotaksurat', function () {
-    return view('kotakSurat');
-});
-
-Route::get('/tambahsurat', function () {
-    return view('tambahSurat');
-});
-
-Route::get('/kuis', function () {
-    return view('kuis');
-});
->>>>>>> 7f7e0b463df7dc061c5283011c468a2cda990ce1
