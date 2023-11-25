@@ -30,11 +30,25 @@
     </div>
 
     @foreach ($posts as $post)
-        <div class='surat'>
-            <h2>{{ $post->topic }}</h2>
-            <p>{{ $post->recipient}}</p>
+    <div class="bg-[#f1f1f1] grid h-full mb-4 rounded rounded-lg mt-4 ml-24 mr-24">
+        <div class="align-middle flex justify-between pt-5 px-7">
+            <div class="flex gap-4">
+                <img src="https://rvs-accountable-social-media-feed.vercel.app/assets/User Avatar 05.svg" alt="">
+                <div class="leading-5">
+                    <h4 class="font-bold text-black">You to {{ $post->recipient }}</h4>
+                    <span>{{ $post->created_at }}</span>
+                </div>
+            </div>
+            <a href="#" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Report.svg" alt="" class=""><span class="">Report</span></a>
+        </div>
+        <div class="font-normal px-7 py-3 text-black">
             <p>{{ $post->content }}</p>
         </div>
+        <div class="flex gap-3 pb-6 pt-3 px-7">
+            <a href="#" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Comments.svg" alt=""><span>11 comments</span></a>
+            <a href="#" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Reaction.svg" alt=""><span>24 reactions</span></a>
+        </div>
+    </div>
     @endforeach
 </body>
 </html>
