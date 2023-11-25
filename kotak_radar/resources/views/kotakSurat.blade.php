@@ -13,7 +13,7 @@
         <div>
             <a href="/">Beranda</a>
             <a href="/kuis">Kuis</a>
-            <a href="/kotaksurat">Kotak Surat</a>
+            <a href="/mail">Kotak Surat</a>
             @csrf
             <a href="logout">Logout</a>
         </div>

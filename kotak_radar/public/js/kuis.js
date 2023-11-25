@@ -86,7 +86,7 @@ const quizData = [
       else {
         quiz.innerHTML = `
               <h2>Nilai anda ${score}%/100%</h2>
-              <button onclick="window.location.href='/'">Kembali</button>
+              <button onclick="window.location.href='/home'">Kembali</button>
           `;
       }
     }
