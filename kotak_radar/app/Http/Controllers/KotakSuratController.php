@@ -23,9 +23,15 @@ class KotakSuratController extends Controller
     // post mail
     public function postMail(MailRequest $request) {
 
-        Post::create($request->validated());
-    
-        // User is not authenticated, handle accordingly (e.g., redirect to login)
+        // define current user
+        $user = auth()->user();
+
+        // create post
+        $post = Post::create($request->validated());
+        
+        // save post to user
+        $user->post()->save($post);
+
         return redirect('/mail');
     }
 

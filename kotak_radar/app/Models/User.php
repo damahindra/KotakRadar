@@ -41,5 +41,15 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
-    ];  
+    ]; 
+
+    /**
+     * Get all of the comments for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function post(): HasMany
+    {
+        return $this->hasMany(Post::class, 'user_id');
+    }
 }

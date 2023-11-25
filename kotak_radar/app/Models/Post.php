@@ -14,10 +14,10 @@ class Post extends Model
      * @var array<int, string>
      */
     protected $fillable = [
+        'user_id',
         'recipient',
         'topic',
         'content',
-        'user_id'
     ];
 
     /**
@@ -27,4 +27,13 @@ class Post extends Model
      */
     protected $hidden = [];
     
+    /**
+     * Get the user that owns the Post
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'id');
+    }
 }
