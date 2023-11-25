@@ -27,12 +27,12 @@ class LoginController extends Controller
      */
     public function login(LoginRequest $request)
     {
-        $credentials = $request->getCredentials();
+        $credentials = $request->validated();
 
         if (Auth::attempt($credentials)) {
 
             $request->session()->regenerate();
-            
+
             return redirect('/home');
         }
  

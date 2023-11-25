@@ -11,7 +11,7 @@
 <body>
     <nav class="topnav">
         <div>
-            <a class="beranda" href="/">Beranda</a>
+            <a class="beranda" href="/home">Beranda</a>
             <a href="/kuis">Kuis</a>
             <a href="/mail">Kotak Surat</a>
         </div>
