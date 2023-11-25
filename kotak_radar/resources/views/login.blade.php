@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="input-group">
-                <button onclick="window.location.href='/'">Login <i class="fa-solid fa-arrow-right"></i></button>
+                <button onclick="window.location.href='/home'">Login <i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </form>
 

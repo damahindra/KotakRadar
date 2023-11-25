@@ -30,9 +30,10 @@ class LoginController extends Controller
         $credentials = $request->getCredentials();
 
         if (Auth::attempt($credentials)) {
+
             $request->session()->regenerate();
- 
-            return redirect()->intended('/');
+            
+            return redirect('/home');
         }
  
         return back()->withErrors([

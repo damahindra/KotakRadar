@@ -13,7 +13,7 @@
         <div>
             <a class="beranda" href="/">Beranda</a>
             <a href="/kuis">Kuis</a>
-            <a href="/kotaksurat">Kotak Surat</a>
+            <a href="/mail">Kotak Surat</a>
         </div>
         <div class="button">
             <a href="/register" class="sign">Sign up</a>

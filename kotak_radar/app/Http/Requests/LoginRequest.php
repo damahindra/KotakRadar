@@ -47,6 +47,7 @@ class LoginRequest extends FormRequest
                 'password' => $this->get('password')
             ];
         }
+        return [];
     }
 
     /**
