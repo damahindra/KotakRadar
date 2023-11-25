@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz-App using HTML CSS JS</title>
+  <title>Kuis</title>
   <script src="https://kit.fontawesome.com/b91379b65b.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="./js-brands.svg" type="image/x-icon">
   <link rel="stylesheet" href="{{ URL::asset('css/kuis.css'); }} ">

@@ -10,7 +10,7 @@
 <nav class="topnav">
         <div>
             <a href="/">Beranda</a>
-            <a href="">Kuis</a>
+            <a href="/kuis">Kuis</a>
             <a href="/kotaksurat">Kotak Surat</a>
         </div>
         <div class="button">
