@@ -28,7 +28,7 @@
                 <a href="/logout">Logout</a>
             </div>
             <div>
-                <a>Selamat Datang! {{ $user->name}}</a>
+                <a>Selamat Datang, {{ $user->name}}</a>
             </div>
 
         </div>

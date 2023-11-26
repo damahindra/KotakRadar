@@ -76,6 +76,8 @@
             <div class="flex gap-4">
                 <div class="leading-5">
                     <h4 class="font-bold text-black">{{ $user_name->name }} commented</h4>
+                    <h4 class="text-black">{{ $comment->created_at }}</h4>
+                    <br>
                     <h4 class="text-black">{{ $comment->content }}</h4>
                 </div>
             </div>

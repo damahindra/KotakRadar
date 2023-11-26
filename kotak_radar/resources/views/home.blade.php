@@ -31,7 +31,7 @@
                 <a href="/logout">Logout</a>
             </div>
             <div>
-                <a>Selamat Datang! {{ $user->name}}</a>
+                <a>Selamat Datang, {{ $user->name}}</a>
             </div>
 
         </div>
@@ -103,9 +103,12 @@
                 <div class="bg-white p-7 rounded rounded-lg h-full">
                     <h2 class="font-bold mb-4 text-gray-700 text-lg">All Topic</h2>
                     <ul class="gap-4 grid leading-5 text-gray-500">
-                        @foreach ($posts as $post)
+                        @php
+                            $topics = App\Models\Post::select('topic')->distinct()->get();
+                        @endphp
+                        @foreach ($topics as $topic)
                         <li class="gap-2 grid w-full">
-                            <p class="font-medium text-black">{{ $post->topic }}</p>
+                            <p class="font-medium text-black">{{ $topic->topic }}</p>
                         </li>
                         @endforeach
                     </ul>
