@@ -12,8 +12,8 @@
     <div class="wrapper">
 
         <div class="heading">
-            <h2>Welcome!</h2>
-            <p>Register new account</p>
+            <h2>Kotak Radar</h2>
+            <p>Buat akun baru</p>
         </div>
 
         <form method="POST" action="{{route('register.perform')}}">
@@ -33,7 +33,7 @@
             <div class="input-group row">
 
                 <div class="row">
-                    <p>Sudah memiliki akun?<a href="/login">Login</a></p>
+                    <p>Sudah memiliki akun?<a href="/login">Masuk</a></p>
                 </div>
             </div>
 

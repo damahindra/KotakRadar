@@ -1,0 +1,81 @@
+body {
+    background-color: #fafafa;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #BB2525;
+    overflow: hidden;
+    filter: drop-shadow(#c9c9c9 0px 0px 10px);
+    justify-content: space-between;
+    display: flex;
+    padding-left: 64px;
+    padding-right: 64px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  /* Style the links inside the navigation bar */
+  .nav-left-content div, .nav-right-content div {
+    float: left;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    justify-content: space-between;
+  }
+
+  /* Change the color of links on hover */
+  .nav-left-content div:hover {
+    color: #fafafa;
+    background-color: #ee6464;
+  }
+
+  .nav-right-content div:hover {
+    color: #fafafa;
+  }
+
+  /* Add a color to the active/current link */
+  .nav-left-content div.active {
+    background-color: #efefef;
+    color: #e3e3e3;
+  }
+
+  .title {
+    margin: 24px 32px 24px 32px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+  }
+
+  .title button {
+    height: 45px;
+    border: none;
+    color: #FFFFFF;
+    background-color: #BB2525;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 8px 16px 8px 16px;
+    cursor: pointer;
+  }
+
+  .title button:hover{
+    background-color: #822525;
+   }
+
+   .input-field{
+    width: 100%;
+    height: 45px;
+    border: none;
+    padding: 10px;
+    background-color: #eeeeee;
+    color: gray;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 20px;
+    transition: .5s;
+    border-radius: 5px;
+   }

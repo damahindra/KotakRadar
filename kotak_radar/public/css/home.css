@@ -60,6 +60,7 @@
 
    .heading p{
     color: #AAA8BB;
+    margin-top: 4px;
    }
 
    .heading i{
@@ -99,7 +100,7 @@
    }
 
    .row a {
-    margin-left: 8px;
+    margin-left: 4px;
    }
 
    .custom-checkbox{

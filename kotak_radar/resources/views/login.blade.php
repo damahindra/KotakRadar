@@ -12,8 +12,8 @@
     <div class="wrapper">
 
         <div class="heading">
-            <h2>Welcome Back!</h2>
-            <p>Sign In to your account</p>
+            <h2>Selamat Datang!</h2>
+            <p>Masuk ke akun anda</p>
         </div>
 
         <form method="POST" action="{{route('login.perform')}}">
@@ -29,7 +29,7 @@
             <div class="input-group row">
 
                 <div class="row">
-                    <p>Tidak memiliki akun?<a href="/">Register</a></p>
+                    <p>Tidak memiliki akun?<a href="/">Buat akun</a></p>
                 </div>
             </div>
 

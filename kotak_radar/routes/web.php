@@ -49,4 +49,9 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         return view('kuis');
     });
 
+    //
+    Route::get('/detail', function () {
+        return view('detailSurat');
+    });
+
 });
