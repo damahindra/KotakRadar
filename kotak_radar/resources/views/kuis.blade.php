@@ -32,6 +32,7 @@
           <input type="radio" name="answer" id="d" class="answer" />
           <label for="d" id="d_text">Answer...</label>
         </li>
+        <h4 id="jawaban-benar">Jawaban anda</h4>
       </ul>
     </div>
     <button id="submit">Selanjutnya</button>
