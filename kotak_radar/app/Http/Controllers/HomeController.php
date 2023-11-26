@@ -31,4 +31,17 @@ class HomeController extends Controller
         $comments = Comments::where('post_id', $post->id)->orderBy('created_at', 'desc')->get();
         return view('detailSurat', compact('user', 'post', 'comments'));
     }
+
+    // filter by topic
+    public function filterByTopic($topic) {
+        $user = auth()->user();
+        // fetch all posts
+        $all_user = User::all();
+        $filtered = Post::where('topic', $topic)->orderBy('created_at', 'desc')->get();
+        return view('home', [
+            'user' => $user,
+            'users' => $all_user,
+            'posts' => $filtered
+        ]);
+    }
 }

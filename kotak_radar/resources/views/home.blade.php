@@ -101,14 +101,14 @@
             </div>
             <div class="mr-8 mt-5 flex flex-col-reverse h-full lg:flex-col lg:order-none lg:w-1/4 order-last w-full">
                 <div class="bg-white p-7 rounded rounded-lg h-full">
-                    <h2 class="font-bold mb-4 text-gray-700 text-lg">All Topic</h2>
+                    <h2 class="font-bold mb-4 text-gray-700 text-lg"><a href="/home">All Topic</a></h2>
                     <ul class="gap-4 grid leading-5 text-gray-500">
                         @php
                             $topics = App\Models\Post::select('topic')->distinct()->get();
                         @endphp
                         @foreach ($topics as $topic)
                         <li class="gap-2 grid w-full">
-                            <p class="font-medium text-black">{{ $topic->topic }}</p>
+                            <a href="{{ url('/topic', $topic->topic) }}" class="font-medium text-black">{{ $topic->topic }}</a>
                         </li>
                         @endforeach
                     </ul>

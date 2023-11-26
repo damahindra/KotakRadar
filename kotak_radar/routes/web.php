@@ -19,6 +19,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
      * Home Routes
      */
     Route::get('/home', 'HomeController@index')->name('home.index');
+    Route::get('/topic/{topic}', 'HomeController@filterByTopic')->name('home.filter');
 
     /**
      * Register Routes
