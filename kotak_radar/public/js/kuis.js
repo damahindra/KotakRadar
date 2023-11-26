@@ -1,43 +1,42 @@
 const quizData = [
     {
-      question: "Siapa nama Presiden pertama?",
-      a: "Naruto",
-      b: "Gojo Satoru",
-      c: "Yelan",
-      d: "Ir. Soekarno",
+      question: "Alasan kamu nggak nyoblos itu yang mana nih?",
+      a: "Nggak tau banyak soal politik",
+      b: "Nggak suka sama calonnya",
+      c: "Nggak percaya sama sistem politiknya",
+      d: "Semua jawaban di atas",
       correct: "d"
     },
     {
-      question: "Siapa nama presiden saat ini?",
-      a: "Gibran Rakabuming Raka",
-      b: "Joko Widodo",
-      c: "Ganjar Pranono",
-      d: "Anies Basedan",
-      correct: "b"
+      question: "Kalo kamu gak nyoblos, dampaknya apa sih menurut kamu?",
+      a: "Bisa bikin orang ikutan nyoblos lebih banyak",
+      b: "Bisa bikin politik jadi kurang stabil",
+      c: "Bisa nambah kepercayaan sama pemerintah",
+      d: "Nggak punya dampak yang berarti ",
+      correct: "d"
     },
     {
-      question: "Siapa Oshiku?",
-      a: "Shani Indira Natio",
-      b: "Azizi Shafa Asadel",
-      c: "Marsha Lenathea",
-      d: "Shania Gracia",
+      question: "Kamu lebih ke arah cuek gitu sama pemilu, ya?",
+      a: "Iya, soalnya kurang tertarik",
+      b: "Enggak ada bedanya sama generasi lain",
+      c: "Enggak, malah suka ikut campur",
+      d: "Tergantung hal-hal tertentu",
       correct: "a"
     },
     {
-      question: "Mau uang berapa?",
-      a: "1.000.000",
-      b: "25.000.000",
-      c: "20.000",
-      d: "Ga pingin",
-      correct: "b"
+      question: "Media sosial berpengaruh gak buat kamu ikutan pemilu 2024?",
+      a: "Bikin aku lebih aktif nyoblos",
+      b: "Malah bikin males ikutan pemilu",
+      c: "Gak ada pengaruh yang kentara",
+      d: "Bergantung pada isinya di media sosial",
+      correct: "d"
     },
     {
-      question: "Is javaScript is programming language?",
-      a: "Yes",
-      b: "No",
-      c: "Not sure",
-      d: "none of the above",
-      correct: "a"
+      question: "Pernah nggak, sih, baca aturan main soal cara pemilihan umum?",
+      a: "Udah banget, sampai hafal semuanya",
+      b: "Iya sih, tapi masih agak bingung",
+      c: "Nggak pernah, soalnya ribet",
+      correct: "b"
     },
   ];
 
@@ -48,6 +47,7 @@ const quizData = [
   const b_text = document.getElementById("b_text");
   const c_text = document.getElementById("c_text");
   const d_text = document.getElementById("d_text");
+  const status = document.getElementById("jawaban-benar");
   const submitButton = document.getElementById("submit");
 
   let currentQuiz = 0;
@@ -72,7 +72,13 @@ const quizData = [
     a_text.innerText = currentQuizData.a;
     b_text.innerText = currentQuizData.b;
     c_text.innerText = currentQuizData.c;
-    d_text.innerText = currentQuizData.d;
+    if(currentQuizData.d == null){
+        d_text.remove();
+        d.remove();
+    }
+    else {
+        d_text.innerText = currentQuizData.d;
+    }
   };
 
   loadQuiz();
@@ -80,7 +86,10 @@ const quizData = [
   submitButton.addEventListener("click", () => {
     const answer = getSelected();
     if (answer) {
-      if (answer === quizData[currentQuiz].correct) score += 20;
+      if (answer === quizData[currentQuiz].correct) {
+        score += 20;
+      }
+
       currentQuiz++;
       if (currentQuiz < quizData.length) loadQuiz();
       else {
