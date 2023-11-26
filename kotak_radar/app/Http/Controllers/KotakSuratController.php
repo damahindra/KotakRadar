@@ -33,7 +33,7 @@ class KotakSuratController extends Controller
             'topic' => $request['topic'],
             'content' => $request['content'],
         ]);
-        
+
         // // associate post with user
         // $post->user()->associate($user);
 
@@ -44,7 +44,11 @@ class KotakSuratController extends Controller
     }
 
     public function fetch() {
+        $user = auth()->user();
         $posts = Post::where('user_id', auth()->user()->id)->get();
-        return view('kotakSurat', ['posts' => $posts]);
+        return view('kotakSurat', [
+            'posts' => $posts,
+            'user' => $user
+        ]);
     }
 }

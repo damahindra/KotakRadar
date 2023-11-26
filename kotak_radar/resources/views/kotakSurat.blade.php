@@ -10,31 +10,64 @@
 </head>
 <body>
 <nav class="topnav">
-        <div>
-            <a href="/">Beranda</a>
-            <a href="/kuis">Kuis</a>
-            <a href="/mail">Kotak Surat</a>
-            @csrf
-            <a href="logout">Logout</a>
+        <div class="nav-left-content">
+            <div>
+                <a href="/home">Beranda</a>
+            </div>
+            <div>
+                <a href="/kuis">Kuis</a>
+            </div>
+            <div>
+                <a href="/mail">Kotak Surat</a>
+            </div>
+
         </div>
-        <div class="button">
-            <!-- <a href="/register" class="sign">Sign up</a>
-            <a href="/login" class="login">Log in</a> -->
-            {{-- <button class="daftar"><a href="register">Sign Up</a></button></div></class></buttonclass>
-       <button class="masuk"><a href="login">Log In</a></button></div></class></buttonclass> --}}
+        <div class="nav-right-content">
+            @csrf
+            <div>
+                <a href="/logout">Logout</a>
+            </div>
+            <div>
+                <a>Selamat Datang! {{ $user->name}}</a>
+            </div>
+
         </div>
     </nav>
-    <div class="title">
-        <h2>Kotak Surat</h2>
-        <button onclick="window.location.href='/addmail'">Tambahkan surat</button>
+    <div class="pt-5">
+
+    <div class="title px-16">
+        <h2 class="text-xl font-bold">Kotak Surat</h2>
+        <button class="inline-flex items-center" onclick="window.location.href='/addmail'">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+</svg>
+
+        <span>Tambahkan surat</span>
+        </button>
     </div>
 
     @foreach ($posts as $post)
-        <div class='surat'>
-            <h2>{{ $post->topic }}</h2>
-            <p>{{ $post->recipient}}</p>
+    <div class="bg-[#f1f1f1] grid h-full mb-4 rounded rounded-lg mt-4 ml-24 mr-24">
+        <div class="align-middle flex justify-between pt-5 px-16">
+            <div class="flex gap-4">
+                <div class="leading-5">
+                    <h4 class="font-bold text-[#BB2525]"><span class="font-normal text-black">Untuk: </span>{{ $post->recipient }}</h4>
+                    <span>{{ $post->created_at }}</span>
+                </div>
+            </div>
+            <div>
+            <p class="mt-6 status">Diterima</p>
+            </div>
+
+        </div>
+        <div class="font-normal px-16 pb-6 text-black">
             <p>{{ $post->content }}</p>
         </div>
+        <div class="flex gap-3 pb-6">
+        </div>
+    </div>
     @endforeach
+    </div>
+
 </body>
 </html>

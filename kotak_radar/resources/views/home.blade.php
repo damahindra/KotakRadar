@@ -13,42 +13,51 @@
 <body>
 
     <nav class="topnav">
-        <div>
-            <a class="beranda" href="/home">Beranda</a>
-            <a href="/kuis">Kuis</a>
-            <a href="/mail">Kotak Surat</a>
-            @csrf
-            <a href="/logout">Logout</a>
-            <p>{{ $user->name}}</p>
-        </div>
-        <div class="button">
+        <div class="nav-left-content">
+            <div>
+                <a href="/home">Beranda</a>
+            </div>
+            <div>
+                <a href="/kuis">Kuis</a>
+            </div>
+            <div>
+                <a href="/mail">Kotak Surat</a>
+            </div>
 
-            {{-- <button class="daftar"><a href="register">Sign Up</a></button></div></class></buttonclass>
-       <button class="masuk"><a href="login">Log In</a></button></div></class></buttonclass> --}}
+        </div>
+        <div class="nav-right-content">
+            @csrf
+            <div>
+                <a href="/logout">Logout</a>
+            </div>
+            <div>
+                <a>Selamat Datang! {{ $user->name}}</a>
+            </div>
+
         </div>
     </nav>
+    <div class="pt-5">
     @foreach ($posts as $post)
-    <div class="bg-[#f1f1f1] grid h-full mb-4 rounded rounded-lg mt-4 ml-24 mr-24">
-        <div class="align-middle flex justify-between pt-5 px-7">
+    <div class="bg-[#f1f1f1] grid h-full mb-4 rounded rounded-lg mt-4 ml-64 mr-64">
+        <div class="align-middle flex justify-between pt-5 px-16">
             <div class="flex gap-4">
-                <img src="https://rvs-accountable-social-media-feed.vercel.app/assets/User Avatar 05.svg" alt="">
                 <div class="leading-5">
-                    <h4 class="font-bold text-black">{{ $post->recipient }}</h4>
+                    <h4 class="overflow-hidden font-bold text-[#BB2525]">{{ $user->name}} <span class="font-normal text-black">to</span>  {{ $post->recipient }}</h4>
                     <span>{{ $post->created_at }}</span>
                 </div>
             </div>
-            <a href="#" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Report.svg" alt="" class=""><span class="">Report</span></a>
         </div>
-        <div class="font-normal px-7 py-3 text-black">
+        <div class="font-normal px-16 py-3 pb-6 text-black">
             <p>{{ $post->content }}</p>
         </div>
-        <div class="flex gap-3 pb-6 pt-3 px-7">
-            <a href="#" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Comments.svg" alt=""><span>11 comments</span></a>
-            <a href="#" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Reaction.svg" alt=""><span>24 reactions</span></a>
+        <div class="flex gap-3 pb-6 pt-3 px-7 ml-8">
+        <a href="#" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Comments.svg" alt=""><span>36 comments</span></a>
         </div>
     </div>
     @endforeach
-    
+    </div>
+
+
 </body>
 
 </html>

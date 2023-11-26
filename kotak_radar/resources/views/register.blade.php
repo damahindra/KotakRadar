@@ -18,6 +18,9 @@
 
         <form method="POST" action="{{route('register.perform')}}">
             @csrf
+            <div class="input-group">
+                <input type="text" name="name" class="input-field" placeholder="Name">
+            </div>
 
             <div class="input-group">
                 <input type="text" name="email" class="input-field" placeholder="Email">
@@ -27,9 +30,13 @@
                 <input type="password" name="password" class="input-field" placeholder="Password">
             </div>
 
-            <div class="input-group">
-                <input type="text" name="name" class="input-field" placeholder="Name">
+            <div class="input-group row">
+
+                <div class="row">
+                    <p>Sudah memiliki akun?<a href="/login">Login</a></p>
+                </div>
             </div>
+
             <div class="input-group">
                 <button onclick="window.location.href='/login'">Register<i class="fa-solid fa-arrow-right"></i></button>
             </div>

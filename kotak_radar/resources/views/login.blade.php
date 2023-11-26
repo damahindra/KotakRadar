@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="{{ URL::asset('css/home.css'); }}">
     <title>Login</title>
 </head>
-
 <body>
+
     <div class="wrapper">
 
         <div class="heading">
@@ -29,17 +29,12 @@
             <div class="input-group row">
 
                 <div class="row">
-                    <input type="checkbox" name="remember" hidden>
-                    <label for="remember" class="custom-checkbox"></label>
-                    <label for="remember">Remember me?</label>
-                </div>
-
-                <div class="row">
-                    <a href="#" target="_blank">Forgot password?</a>
+                    <p>Tidak memiliki akun?<a href="/">Register</a></p>
                 </div>
             </div>
+
             <div class="input-group">
-                <button><a href="/home">Login</a><i class="fa-solid fa-arrow-right"></i></button>
+                <button onclick="window.location.href='/home'">Login<i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </form>
 

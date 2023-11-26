@@ -3,48 +3,42 @@ body {
 }
 /* Add a black background color to the top navigation */
 .topnav {
-    background-color: #fafafa;
+    background-color: #BB2525;
     overflow: hidden;
     filter: drop-shadow(#c9c9c9 0px 0px 10px);
-    border-radius: 8px;
     justify-content: space-between;
-    align-items: center;
-    align-content: center;
-    align-self: center;
+    display: flex;
+    padding-left: 64px;
+    padding-right: 64px;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
-  .beranda {
-    color: #BB2525;
-    font-weight: bold;
-  }
+
   /* Style the links inside the navigation bar */
-  .topnav a {
+  .nav-left-content div, .nav-right-content div {
     float: left;
-    color: #5C6670;
+    color: #f5f5f5;
     text-align: center;
     padding: 16px 32px;
     text-decoration: none;
     font-size: 17px;
+    justify-content: space-between;
   }
 
   /* Change the color of links on hover */
-  .topnav a:hover {
-    color: black;
-    color: #BB2525;
+  .nav-left-content div:hover {
+    color: #fafafa;
+    background-color: #ee6464;
+  }
+
+  .nav-right-content div:hover {
+    color: #fafafa;
   }
 
   /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #e44040;
-    color: #941c1c;
-  }
-
-  .sign {
-    background-color: none;
-    border-radius: 8px;
-    padding: 8px 16px 8px 16px;
-  }
-
-  .topnav .button {
-    margin-left: 150px;
+  .nav-left-content div.active {
+    background-color: #efefef;
+    color: #e3e3e3;
   }
 
