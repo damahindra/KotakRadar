@@ -79,6 +79,7 @@
             @foreach ($posts as $post)
             @php
                 $user = App\Models\User::find($post->user_id);
+                $comments_count = App\Models\Comments::where('post_id', $post->id)->count()
             @endphp
                 <div class="bg-white grid h-full mb-3 rounded rounded-lg">
                     <div class="align-middle flex justify-between pt-5 px-7">
@@ -93,7 +94,7 @@
                     <p>{{ $post->content }}</p>
                     </div>
                     <div class="flex gap-3 pb-6 pt-3 px-7">
-                        <a href="{{ url('/mail', ['user' => $user->id, 'post' => $post->id])}}" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Comments.svg" alt=""><span>11 comments</span></a>
+                        <a href="{{ url('/mail', ['user' => $user->id, 'post' => $post->id])}}" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Comments.svg" alt=""><span>{{ $comments_count }} comments</span></a>
                     </div>
                 </div>
                 @endforeach
