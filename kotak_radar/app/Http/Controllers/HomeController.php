@@ -16,7 +16,7 @@ class HomeController extends Controller
         $user = auth()->user();
 
         // fetch all posts
-        $all_post = Post::all();
+        $all_post = Post::orderBy('created_at', 'desc')->get();
         $all_user = User::all();
 
         return view('home', [
@@ -28,7 +28,7 @@ class HomeController extends Controller
 
     // show selected mail
     public function showDetails(User $user, Post $post) {
-        $comments = Comments::where('post_id', $post->id)->get();
+        $comments = Comments::where('post_id', $post->id)->orderBy('created_at', 'desc')->get();
         return view('detailSurat', compact('user', 'post', 'comments'));
     }
 }
