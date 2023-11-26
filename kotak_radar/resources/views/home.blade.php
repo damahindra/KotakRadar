@@ -37,6 +37,7 @@
         </div>
     </nav>
     <!-- <div class="pt-5">
+    {{-- display all mails --}}
     @foreach ($posts as $post)
     @php
         $user = App\Models\User::find($post->user_id);
@@ -45,7 +46,7 @@
         <div class="align-middle flex justify-between pt-5 px-7">
             <div class="flex gap-4">
                 <div class="leading-5">
-                    <h4 class="overflow-hidden font-bold text-[#BB2525]">{{ $user->name}} <span class="font-normal text-black">to</span>  {{ $post->recipient }}</h4>
+                    <h4 class="overflow-hidden font-bold text-[#BB2525]">{{ $user->name }} <span class="font-normal text-black">to</span>  {{ $post->recipient }}</h4>
                     <span>{{ $post->created_at }}</span>
                 </div>
             </div>
@@ -60,9 +61,7 @@
     @endforeach
     </div> -->
     <main>
-    @php
-        $user = App\Models\User::find($post->user_id);
-    @endphp
+    
         <div class="container flex flex-col gap-5 lg:flex-row p-5 py-10 text-gray-500">
 
             <!-- <div class="mt-5 bg-white h-full lg:mt-0 lg:order-none lg:w-1/4 order-first p-7 rounded rounded-md w-full">
@@ -78,11 +77,14 @@
             </div> -->
             <div class="h-full lg:order-none lg:w-1/1 order-first w-full mt-5 ml-8">
             @foreach ($posts as $post)
+            @php
+                $user = App\Models\User::find($post->user_id);
+            @endphp
                 <div class="bg-white grid h-full mb-3 rounded rounded-lg">
                     <div class="align-middle flex justify-between pt-5 px-7">
                         <div class="flex gap-4">
                             <div class="leading-5">
-                            <h4 class="overflow-hidden font-bold text-[#BB2525]">{{ $user->name}} <span class="font-normal text-black">to</span>  {{ $post->recipient }}</h4>
+                            <h4 class="overflow-hidden font-bold text-[#BB2525]">{{ $user->name }} <span class="font-normal text-black">to</span>  {{ $post->recipient }}</h4>
                             <span>{{ $post->created_at }}</span>
                             </div>
                         </div>
@@ -91,7 +93,7 @@
                     <p>{{ $post->content }}</p>
                     </div>
                     <div class="flex gap-3 pb-6 pt-3 px-7">
-                        <a href="/detail" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Comments.svg" alt=""><span>11 comments</span></a>
+                        <a href="{{ url('/mail', ['user' => $user->id, 'post' => $post->id])}}" class="align-middle border border-gray-300 flex gap-3 justify-center px-4 py-1 rounded rounded-lg"><img src="https://rvs-accountable-social-media-feed.vercel.app/assets/Comments.svg" alt=""><span>11 comments</span></a>
                     </div>
                 </div>
                 @endforeach
