@@ -55,10 +55,13 @@
                     <span>{{ $post->created_at }}</span>
                 </div>
             </div>
-            <div>
-            <p class="mt-6 status">Diterima</p>
+            <div class="">
+            <p class="mt-8 status">Diterima</p>
             </div>
 
+        </div>
+        <div class="font-normal px-16 pb-3 text-black">
+            <p><span class="font-semibold">Topik:</span> {{ $post->topic }}</p>
         </div>
         <div class="font-normal px-16 pb-6 text-black">
             <p>{{ $post->content }}</p>

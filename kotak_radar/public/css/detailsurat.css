@@ -66,8 +66,8 @@ body {
     background-color: #822525;
    }
 
+
    .input-group input{
-    width: 100%;
     height: 45px;
     border: none;
     padding: 10px;
@@ -81,7 +81,6 @@ body {
    }
 
    .input-group button{
-    width: 100%;
     height: 45px;
     border: none;
     color: #FFFFFF;

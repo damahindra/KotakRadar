@@ -51,8 +51,8 @@
             </div>
         </div>
     <div class="bg-white grid h-full rounded rounded-lg mt-8 ml-72 mr-72">
-        <div class="align-middle flex justify-between pt-5 pb-4 px-16">
-            @php 
+        <div class="pt-3 pb-2 px-12">
+            @php
                 $curr_user = auth()->user();
             @endphp
             <form method='POST' action="{{ route('comment.perform') }}">
@@ -60,11 +60,14 @@
                 <div class="input-group">
                     <input type="hidden" name="user_id" value="{{ $curr_user->id }}">
                     <input type="hidden" name="post_id" value="{{ $post->id }}">
-                    <input type="textfield" name="content" class="input-field" placeholder="Share your comments...">
-                    <button type="submit">Post comment<i class="fa-solid fa-arrow-right"></i></button>
+                        <div class="pt-3 container flex flex-col lg:flex-row text-gray-500">
+                        <input type="textfield" name="content" class="h-full lg:order-none lg:w-full order-first input-field" placeholder="Share your comments...">
+                    <button class="h-full lg:order-none lg:w-1/5 order-last w-full ml-6" type="submit">Post comment<i></i></button>
+
+                    </div>
+
                 </div>
             </form>
-
         </div>
     </div>
     @foreach($comments as $comment)
@@ -79,7 +82,7 @@
                     <h4 class="text-black">{{ $comment->content }}</h4>
                 </div>
             </div>
-    
+
         </div>
     </div>
     @endforeach

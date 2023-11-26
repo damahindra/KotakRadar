@@ -19,9 +19,18 @@
         <span class="valid_info_name"></span>
       </div>
 
-      <div class="inputField">
+      <!-- <div class="inputField">
         <input type="topik" name="topic" id="topik" placeholder="Topik" required="" />
         <span class="valid_info_email"></span>
+      </div> -->
+      <div class="inputField">
+        <select name="topic" id="topik">
+            <option value="topik 1">Topik 1</option>
+            <option value="topik 2">Topik 2</option>
+            <option value="topik 3">Topik 3</option>
+            <option value="topik 4">Topik 4</option>
+        </select>
+        <span class="valid_info_topic"></span>
       </div>
 
       <div class="inputField">
