@@ -1,0 +1,72 @@
+.topnav {
+    background-color: #BB2525;
+    overflow: hidden;
+    filter: drop-shadow(#c9c9c9 0px 0px 10px);
+    justify-content: space-between;
+    display: flex;
+    padding-left: 64px;
+    padding-right: 64px;
+    width: 100%;
+  }
+  @media screen and (max-width: 1200px){
+    .topnav{
+      left: 0;
+      right: 0;
+      width: 100%;
+      padding: 2.5rem 0 0;
+      text-align: center;
+      background-color: #BB2525;
+      justify-content: start;
+      display: block;
+      margin-top: -32px;
+    }
+    body {
+        margin-top: 0;
+    }
+    .l-main {
+        margin-top: 0;
+
+    }
+  }
+  /* Style the links inside the navigation bar */
+  .nav-left-content div, .nav-right-content div {
+    float: left;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 16px 32px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  /* Change the color of links on hover */
+  .nav-left-content div:hover {
+    color: #fafafa;
+    background-color: #ee6464;
+  }
+
+  .nav-right-content div:hover {
+    color: #fafafa;
+  }
+
+  /* Add a color to the active/current link */
+  .nav-left-content div.active {
+    background-color: #efefef;
+    color: #e3e3e3;
+  }
+
+  .radar-logo {
+    width: 100%;
+    max-width: 90px;
+    height: auto;
+  }
+
+a {
+  text-decoration: none;
+  color: #fafafa;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

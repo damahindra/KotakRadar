@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kuis</title>
   <script src="https://kit.fontawesome.com/b91379b65b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="shortcut icon" href="./js-brands.svg" type="image/x-icon">
   <link rel="stylesheet" href="{{ URL::asset('css/kuis.css'); }} ">
 </head>

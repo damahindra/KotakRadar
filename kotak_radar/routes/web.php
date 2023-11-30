@@ -39,7 +39,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     Route::get('/mail', 'KotakSuratController@fetch')->name('mail.show');
     Route::get('/addmail', 'KotakSuratController@addMailForm')->name('mail.add');
     Route::post('/mail', 'KotakSuratController@postMail')->name('mail.perform');
-    
+
     // comment functionality
     Route::get('/mail/{user}/{post}', 'HomeController@showDetails');
     Route::post('/comment', 'CommentController@postComment')->name('comment.perform');
@@ -52,5 +52,13 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     // Kuis
     Route::get('/kuis', function () {
         return view('kuis');
+    });
+
+    Route::get('/landing', function () {
+        return view('landing');
+    });
+
+    Route::get('/aboutUs', function () {
+        return view('aboutUs');
     });
 });

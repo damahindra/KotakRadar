@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 
 ::selection{
     color: #ffffff;
@@ -7,7 +8,6 @@
    *{
     padding:0;
     margin: 0;
-    font-family: 'Outfit', sans-serif;
     box-sizing: border-box;
     text-decoration: none;
    }
@@ -25,9 +25,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('https://i.ibb.co/s5fFLqr/bg.png');
     background-size: cover;
     padding-top: 20px;
+    background-image: url("../images/bg.png");
+    font-family: "Poppins", sans-serif;
    }
 
    .wrapper{
@@ -120,7 +121,6 @@
    }
 
    input[type=checkbox]:checked ~ .custom-checkbox::before {
-   font-family: "Font Awesome 5 Free";
      content: "\f00c";
      display: inline-block;
      font-weight: 900;

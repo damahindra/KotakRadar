@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ URL::asset('css/kotaksurat.css'); }} ">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ URL::asset('css/navbar.css'); }} ">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Kotak Surat</title>
 </head>
 <body class="bg-slate-100">
-<nav class="topnav">
+<header class="l-header" id="header">
+        <nav class="topnav">
         <div class="nav-left-content">
+            <div>
+                <img src="{{ asset('images/Radar Logo.png') }}" alt="" class="radar-logo">
+            </div>
             <div>
                 <a href="/home">Beranda</a>
             </div>
@@ -20,20 +25,27 @@
             <div>
                 <a href="/mail">Kotak Surat</a>
             </div>
+            <div>
+                <a href="/aboutUs">About Us</a>
+            </div>
+            <div>
+                <a href="#">Policy Brief</a>
+            </div>
 
         </div>
         <div class="nav-right-content">
-            @csrf
+        @csrf
             <div>
                 <a href="/logout">Logout</a>
             </div>
-            <div>
-                <a>Selamat Datang, {{ $user->name}}</a>
+            <div class="name">
+                <p>Selamat Datang, {{ $user->name}}</p>
             </div>
 
         </div>
     </nav>
-    <div class="pt-5">
+        </header>
+    <div class="">
 
     <div class="title px-16">
         <h2 class="text-xl font-bold">Kotak Surat</h2>
@@ -47,21 +59,22 @@
     </div>
 
     @foreach ($posts as $post)
-    <div class="bg-white grid h-full mb-4 rounded rounded-lg mt-4 ml-24 mr-24">
-        <div class="align-middle flex justify-between pt-5 px-16">
+    <div class="bg-white grid h-full mb-4 rounded rounded-lg mt-4 ml-16 mr-16">
+        <div class="items-center flex justify-between pt-5 px-16">
             <div class="flex gap-4">
                 <div class="leading-5">
-                    <h4 class="font-bold text-[#BB2525]"><span class="font-normal text-black">Untuk: </span>{{ $post->recipient }}</h4>
-                    <span>{{ $post->created_at }}</span>
+                    <h4 class="font-bold text-[#BB2525]"><span class="font-bold text-black">Untuk: </span>{{ $post->recipient }}</h4>
+                    <p class="my-4">{{ $post->created_at }}</p>
                 </div>
             </div>
-            <div class="">
-            <p class="mt-8 status">Diterima</p>
-            </div>
+
 
         </div>
-        <div class="font-normal px-16 pb-3 text-black">
+        <div class="font-normal px-16 mb-4 text-black flex justify-between align-middle">
             <p><span class="font-semibold">Topik:</span> {{ $post->topic }}</p>
+            <div class="">
+            <p class="status">Diterima</p>
+            </div>
         </div>
         <div class="font-normal px-16 pb-6 text-black">
             <p>{{ $post->content }}</p>

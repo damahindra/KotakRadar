@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
 pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
@@ -53,7 +53,7 @@ input, textarea, select {
   position: relative;
   display: block;
   background-color: #f4f7fb;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 12px;
   font-weight: 500;
   border: none;
