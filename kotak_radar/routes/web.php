@@ -54,11 +54,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         return view('kuis');
     });
 
-    Route::get('/landing', function () {
-        return view('landing');
-    });
+    Route::get('/landing', 'LandingController@index')->name('landing.show');
 
     Route::get('/aboutUs', function () {
-        return view('aboutUs');
+        $user = auth()->user();
+        return view('aboutUs', [
+            'user' => $user
+        ]);
     });
 });
