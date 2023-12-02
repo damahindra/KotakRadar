@@ -61,4 +61,12 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     Route::get('/aboutUs', function () {
         return view('aboutUs');
     });
+
+    Route::get('/policyBrief', function () {
+        return view('policyBrief');
+    });
+
+    Route::get('/tataCara', function () {
+        return view('tataCara');
+    });
 });

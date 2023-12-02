@@ -29,7 +29,7 @@
                 <a href="/aboutUs">About Us</a>
             </div>
             <div>
-                <a href="#">Policy Brief</a>
+                <a href="/policyBrief">Policy Brief</a>
             </div>
 
         </div>

@@ -23,7 +23,7 @@
         <nav class="topnav">
         <div class="nav-left-content">
             <div>
-                <img src="{{ asset('images/Radar Logo.png') }}" alt="" class="radar-logo">
+                <a href="/landing"><img src="{{ asset('images/Radar Logo.png') }}" alt="" class="radar-logo"></a>
             </div>
             <div>
                 <a href="/home">Beranda</a>
@@ -38,7 +38,7 @@
                 <a href="/aboutUs">About Us</a>
             </div>
             <div>
-                <a href="#">Policy Brief</a>
+                <a href="/policyBrief">Policy Brief</a>
             </div>
 
         </div>
@@ -55,8 +55,6 @@
         </header>
 
         <main class="l-main">
-
-            <!--========== SHARE ==========-->
             <section class="share section bd-container" id="share">
                 <div class="share__container bd-grid">
                 <div class="share__img">
@@ -64,7 +62,7 @@
                     </div>
                     <div class="share__data" data-aos="fade-left">
                         <h2 class="section-title-center">Radar Politik</h2>
-                        <p class="share__description">Kotak Radar</p>
+                        <p class="share__description">Membentuk Masa Depan: Radar Politik, Wadah Digital untuk Generasi Muda yang Peduli Politik</p>
                         <a href="/home" class="button">Telusuri</a>
                     </div>
                 </div>
@@ -76,36 +74,55 @@
                <div class="swiper-wrapper">
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/bg.png') }}" alt="image" class="card__img">
-                        <div class="card__shadow"></div>
+                        <a href="/tataCara"><img src="{{ asset('images/tata-cara/1.svg') }}" alt="tata_cara_1" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/bg.png') }}" alt="image" class="card__img">
-                        <div class="card__shadow"></div>
+                        <img src="{{ asset('images/tata-cara/2.svg') }}" alt="tata_cara_2" class="card__img">
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/bg.png') }}" alt="image" class="card__img">
-                        <div class="card__shadow"></div>
+                        <img src="{{ asset('images/tata-cara/3.svg') }}" alt="tata_cara_3" class="card__img">
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/bg.png') }}" alt="image" class="card__img">
-                        <div class="card__shadow"></div>
+                        <img src="{{ asset('images/tata-cara/4.svg') }}" alt="tata_cara_4" class="card__img">
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/bg.png') }}" alt="image" class="card__img">
-                        <div class="card__shadow"></div>
+                        <img src="{{ asset('images/tata-cara/5.svg') }}" alt="tata_cara_5" class="card__img">
+                     </div>
+                  </article>
+
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="{{ asset('images/tata-cara/6.svg') }}" alt="tata_cara_6" class="card__img">
+                     </div>
+                  </article>
+
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="{{ asset('images/tata-cara/7.svg') }}" alt="tata_cara_7" class="card__img">
+                     </div>
+                  </article>
+
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="{{ asset('images/tata-cara/8.svg') }}" alt="tata_cara_8" class="card__img">
+                     </div>
+                  </article>
+
+                  <article class="card__article swiper-slide">
+                     <div class="card__image">
+                        <img src="{{ asset('images/tata-cara/9.svg') }}" alt="tata_cara_9" class="card__img">
                      </div>
                   </article>
                </div>
@@ -118,7 +135,12 @@
       <section>
         <div class="jadwal">
             <h2>Jadwal Pemilu</h2>
-            <img src="{{ asset('images/bg.png') }}" alt="" data-aos="flip-left">
+            <div class="wrap-container">
+            <div class="wrap">
+                <img src="{{ asset('images/timeline/timeline-1.svg') }}" alt="jadwal-pemilu">
+                <img src="{{ asset('images/timeline/timeline-2.svg') }}" alt="jadwal-pemilu">
+            </div>
+            </div>
         </div>
 
       </section>
@@ -126,7 +148,7 @@
 
         <!--========== FOOTER ==========-->
         <footer class="footer section">
-            <div class="footer__container bd-container bd-grid">
+            <!-- <div class="footer__container bd-container bd-grid">
                 <div class="footer__content">
                     <h3 class="footer__title">
                         <a href="#" class="footer__logo">Radar Politik</a>
@@ -145,7 +167,7 @@
                     <h3 class="footer__title">Social</h3>
                     <a href="https://www.instagram.com/radarpolitik_/" class="footer__social"><i class='bx bxl-instagram-alt'></i></a>
                 </div>
-            </div>
+            </div> -->
 
             <p class="footer__copy">&#169; 2023 Radar Politik. All right reserved</p>
         </footer>

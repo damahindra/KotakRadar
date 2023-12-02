@@ -172,6 +172,7 @@ img{
 .share__description{
   margin-bottom: var(--mb-2);
   color: #313131;
+  text-align: justify;
 }
 
 .share__img{
@@ -265,13 +266,6 @@ img{
 /*========== MEDIA QUERIES ==========*/
 
 /* For full-screen images on small screens */
-@media screen and (max-width: 359px){
-  .home__img,
-  .share__img,
-  .send__img{
-    width: 100%;
-  }
-}
 
 @media screen and (min-width: 576px){
   .home__container,
@@ -304,6 +298,13 @@ img{
   .share__img{
     order: -1;
   }
+
+  .share__description{
+  margin-bottom: var(--mb-2);
+  color: #313131;
+  text-align: justify;
+}
+
 }
 
 @media screen and (min-width: 768px){
@@ -411,6 +412,46 @@ img{
     margin-bottom: 3rem;
 }
 
-.jadwal img {
-    width: 70%;
+.wrap-container {
+    width: 80%;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.wrap {
+    width: 100%;
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+@media screen and (max-width: 768px) {
+
+    .wrap-container {
+        width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    .share__description{
+        text-align: center;
+      }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(0);
+    }
+    55% {
+        transform: translateX(-100%);
+    }
+    75% {
+        transform: translateX(-100%);
+    }
 }
