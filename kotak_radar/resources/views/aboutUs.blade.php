@@ -13,7 +13,7 @@
         <nav class="topnav">
         <div class="nav-left-content">
             <div>
-                <a href="/landing"><img src="{{ asset('images/Radar Logo.png') }}" alt="" class="radar-logo"></a>
+                <a href="{{ route('landing.show') }}"><img src="{{ asset('images/Radar Logo.png') }}" alt="" class="radar-logo"></a>
 
             </div>
             <div>
@@ -38,7 +38,7 @@
                 <a href="/logout">Logout</a>
             </div>
             <div class="name">
-                <p>Selamat Datang, Shani Indira</p>
+                <p>Selamat Datang, {{ $user->name }}</p>
             </div>
         </div>
     </nav>
