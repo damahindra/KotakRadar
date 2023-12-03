@@ -84,7 +84,7 @@
             </div>
             <div id="topik" class="mt-5 flex flex-col h-full lg:flex-col lg:order-none lg:w-1/4 order-last w-full">
                 <div>
-                    <a href="{{ route('landing.show') }}"><img id="mekanisme" src="{{ asset('images/bg.png') }}" alt="" class="h-full mb-5 rounded rounded-lg"></a>
+                    <a href="{{ route('landing.show') . '#mechanism' }}"><img id="mekanisme" src="{{ asset('images/bg.png') }}" alt="" class="h-full mb-5 rounded rounded-lg"></a>
                 </div>
                 <div class="bg-white p-7 rounded rounded-lg h-full">
                     <h3 class="font-bold mb-4 text-[#BB2525] text-lg"><a href="/home">All Topic</a></h3>

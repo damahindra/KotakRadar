@@ -32,23 +32,32 @@
                 <a href="/kuis">Kuis</a>
             </div>
             <div>
-                <a href="/mail">Kotak Surat</a>
+                <a href="{{ route('mail.show') }}">Kotak Surat</a>
             </div>
             <div>
                 <a href="/aboutUs">About Us</a>
             </div>
             <div>
-                <a href="/policyBrief">Policy Brief</a>
+                <a href="{{ route('policy.show') }}">Policy Brief</a>
             </div>
 
         </div>
         <div class="nav-right-content">
+            @if($user)
             <div>
                 <a href="/logout">Logout</a>
             </div>
             <div class="name">
-                <p>Selamat Datang, {{ $user->name }}</p>
+                <p>Selamat Datang, {{ $user->name}}</p>
             </div>
+            @else
+            <div>
+                <a href="{{ route('login.show') }}">Login</a>
+            </div>
+            <div class="name">
+                <p>Selamat Datang!</p>
+            </div>
+            @endif
 
         </div>
     </nav>
@@ -67,7 +76,7 @@
                     </div>
                 </div>
             </section>
-            <h2 class="section-title">Mekanisme Pemilu</h2>
+            <h2 class="section-title" id='mechanism'>Mekanisme Pemilu</h2>
             <section class="container">
          <div class="card__container swiper">
             <div class="card__content">
@@ -75,55 +84,55 @@
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <a href="/tataCara"><img src="{{ asset('images/tata-cara/1.svg') }}" alt="tata_cara_1" class="card__img"></a>
+                        <a href="{{ route('tatacara.show', ['picture' => '1.svg']) }}"><img src="{{ asset('images/tata-cara/1.svg') }}" alt="tata_cara_1" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/tata-cara/2.svg') }}" alt="tata_cara_2" class="card__img">
+                        <a href="{{ route('tatacara.show', ['picture' => '2.svg']) }}"><img src="{{ asset('images/tata-cara/2.svg') }}" alt="tata_cara_2" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/tata-cara/3.svg') }}" alt="tata_cara_3" class="card__img">
+                        <a href="{{ route('tatacara.show', ['picture' => '3.svg']) }}"><img src="{{ asset('images/tata-cara/3.svg') }}" alt="tata_cara_3" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/tata-cara/4.svg') }}" alt="tata_cara_4" class="card__img">
+                        <a href="{{ route('tatacara.show', ['picture' => '4.svg']) }}"><img src="{{ asset('images/tata-cara/4.svg') }}" alt="tata_cara_4" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/tata-cara/5.svg') }}" alt="tata_cara_5" class="card__img">
+                        <a href="{{ route('tatacara.show', ['picture' => '5.svg']) }}"><img src="{{ asset('images/tata-cara/5.svg') }}" alt="tata_cara_5" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/tata-cara/6.svg') }}" alt="tata_cara_6" class="card__img">
+                        <a href="{{ route('tatacara.show', ['picture' => '6.svg']) }}"><img src="{{ asset('images/tata-cara/6.svg') }}" alt="tata_cara_6" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/tata-cara/7.svg') }}" alt="tata_cara_7" class="card__img">
+                        <a href="{{ route('tatacara.show', ['picture' => '7.svg']) }}"><img src="{{ asset('images/tata-cara/7.svg') }}" alt="tata_cara_7" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/tata-cara/8.svg') }}" alt="tata_cara_8" class="card__img">
+                        <a href="{{ route('tatacara.show', ['picture' => '8.svg']) }}"><img src="{{ asset('images/tata-cara/8.svg') }}" alt="tata_cara_8" class="card__img"></a>
                      </div>
                   </article>
 
                   <article class="card__article swiper-slide">
                      <div class="card__image">
-                        <img src="{{ asset('images/tata-cara/9.svg') }}" alt="tata_cara_9" class="card__img">
+                        <a href="{{ route('tatacara.show', ['picture' => '9.svg']) }}"><img src="{{ asset('images/tata-cara/9.svg') }}" alt="tata_cara_9" class="card__img"></a>
                      </div>
                   </article>
                </div>
