@@ -55,7 +55,7 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
 </svg>
 
-        <span>Tambahkan surat</span>
+        <span>Tambah surat</span>
         </button>
     </div>
     <div class="content-parent">
@@ -64,15 +64,15 @@
         <div class="items-center flex justify-between pt-5 px-16">
             <div class="flex gap-4">
                 <div class="leading-5">
-                    <h4 class="font-bold text-[#BB2525]"><span class="font-bold text-black">Untuk: </span>{{ $post->recipient }}</h4>
-                    <p class="my-4">{{ $post->created_at }}</p>
+                    <h4 class="font-bold text-[#BB2525] mb-2"><span class="font-bold text-black">Untuk: </span>{{ $post->recipient }}</h4>
+                    <p><span class="font-semibold">Topik:</span> {{ $post->topic }}</p>
                 </div>
             </div>
 
 
         </div>
-        <div class="font-normal px-16 mb-4 text-black flex justify-between align-middle">
-            <p><span class="font-semibold">Topik:</span> {{ $post->topic }}</p>
+        <div class="font-normal px-16 mb-4 mt-4 text-black flex justify-between align-middle">
+
             <div class="">
             <p class="status">Diterima</p>
             </div>
