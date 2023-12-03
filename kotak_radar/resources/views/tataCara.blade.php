@@ -76,7 +76,7 @@
     <ul class="cards">
       @foreach ($files as $file)
       @php
-          if($file == $picture) {
+          if($file == asset('images/tata-cara/' . $picture)) {
             continue;
           }
       @endphp
