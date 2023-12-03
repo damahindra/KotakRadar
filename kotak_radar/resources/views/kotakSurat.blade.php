@@ -46,9 +46,9 @@
         </div>
     </nav>
         </header>
-    <div class="">
+    <div class="title-parent">
 
-    <div class="title px-16">
+    <div class="title w-4/5">
         <h2 class="text-xl font-bold">Kotak Surat</h2>
         <button class="inline-flex items-center" onclick="window.location.href='/addmail'">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2">
@@ -58,9 +58,9 @@
         <span>Tambahkan surat</span>
         </button>
     </div>
-
+    <div class="content-parent">
     @foreach ($posts as $post)
-    <div class="bg-white grid h-full mb-4 rounded rounded-lg mt-4 ml-16 mr-16">
+    <div class="bg-white grid h-full mb-4 rounded rounded-lg mt-4 w-4/5">
         <div class="items-center flex justify-between pt-5 px-16">
             <div class="flex gap-4">
                 <div class="leading-5">
@@ -85,6 +85,6 @@
     </div>
     @endforeach
     </div>
-
+</div>
 </body>
 </html>

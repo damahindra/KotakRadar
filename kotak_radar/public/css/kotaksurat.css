@@ -43,3 +43,25 @@ body {
     background-color: black;
     height: auto;
    }
+
+   .content-parent {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.title-parent {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
