@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset('images/Radar Color.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ URL::asset('css/login.css'); }} ">
     <link rel="stylesheet" href="{{ URL::asset('css/navbar.css'); }} ">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -84,7 +85,7 @@
             </div>
             <div id="topik" class="mt-5 flex flex-col h-full lg:flex-col lg:order-none lg:w-1/4 order-last w-full">
                 <div>
-                    <a href="{{ route('landing.show') . '#mechanism' }}"><img id="mekanisme" src="{{ asset('images/bg.png') }}" alt="" class="h-full mb-5 rounded rounded-lg"></a>
+                    <a href="{{ route('landing.show') . '#mechanism' }}"><img id="mekanisme" src="{{ asset('images/tata-cara/1.png') }}" alt="" class="h-full mb-5 rounded rounded-lg"></a>
                 </div>
                 <div class="bg-white p-7 rounded rounded-lg h-full">
                     <h3 class="font-bold mb-4 text-[#BB2525] text-lg"><a href="/home">All Topic</a></h3>
@@ -98,12 +99,6 @@
                         </li>
                         @endforeach
                     </ul>
-                    <!-- <a href="#" class="align-middle flex font-semibold gap-2 text-orange-500 underline">
-                        <span>View all Stories</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"></path>
-                        </svg>
-                    </a> -->
                 </div>
             </div>
         </div>

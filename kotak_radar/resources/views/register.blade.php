@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('css/home.css'); }}">
     <title>Register</title>
@@ -39,7 +40,7 @@
             </div>
 
             <div class="input-group">
-                <button onclick="window.location.href='/login'">Register<i class="fa-solid fa-arrow-right"></i></button>
+                <button onclick="window.location.href='register.perform'">Register<i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </form>
 

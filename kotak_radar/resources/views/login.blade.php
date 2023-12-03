@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Montserrat%7CRoboto:300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="{{ URL::asset('css/home.css'); }}">
     <title>Login</title>
@@ -30,7 +31,7 @@
             <div class="input-group row">
 
                 <div class="row">
-                    <p>Tidak memiliki akun?<a href="/">Buat akun</a></p>
+                    <p>Tidak memiliki akun?<a href="/register">Buat akun</a></p>
                 </div>
             </div>
 

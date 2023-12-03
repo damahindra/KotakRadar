@@ -24,7 +24,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     /**
      * Register Routes
      */
-    Route::get('/', 'RegisterController@show')->name('register.show');
+    Route::get('/register', 'RegisterController@show')->name('register.show');
     Route::post('/register', 'RegisterController@register')->name('register.perform');
 
     /**
@@ -54,7 +54,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         return view('kuis');
     });
 
-    Route::get('/landing', 'LandingController@index')->name('landing.show');
+    Route::get('/', 'LandingController@index')->name('landing.show');
 
     Route::get('/aboutUs', function () {
         $user = auth()->user();

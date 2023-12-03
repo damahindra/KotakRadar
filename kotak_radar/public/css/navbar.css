@@ -1,7 +1,6 @@
 .topnav {
     background-color: #BB2525;
     overflow: hidden;
-    filter: drop-shadow(#c9c9c9 0px 0px 10px);
     justify-content: space-between;
     display: flex;
     padding-left: 64px;

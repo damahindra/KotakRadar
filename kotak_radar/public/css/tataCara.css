@@ -4,10 +4,15 @@
     align-items: center;
     margin-top: 24px;
     margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .tata-cara img {
-    width: 70%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main{

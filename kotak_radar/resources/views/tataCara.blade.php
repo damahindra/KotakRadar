@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ URL::asset('css/tataCara.css'); }}">
     <link rel="stylesheet" href="{{ URL::asset('css/navbar.css'); }}">
     <link rel="stylesheet" href="{{ URL::asset('css/main.css'); }}">
-    <title>About Us</title>
+    <title>Tata Cara Pemilu 2024</title>
 </head>
 <body>
 <header class="l-header" id="header">
@@ -70,8 +71,8 @@
     <ul class="cards">
       @foreach ($files as $file)
       @php
-          $fileName = pathinfo($file, PATHINFO_FILENAME) . '.svg';
-          if(pathinfo($file, PATHINFO_FILENAME) . '.svg' == $picture) {
+          $fileName = pathinfo($file, PATHINFO_FILENAME) . '.png';
+          if(pathinfo($file, PATHINFO_FILENAME) . '.png' == $picture) {
             continue;
           }
       @endphp
