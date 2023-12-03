@@ -23,13 +23,13 @@
                 <a href="/kuis">Kuis</a>
             </div>
             <div>
-                <a href="/mail">Kotak Surat</a>
+                <a href="{{ route('mail.show') }}">Kotak Surat</a>
             </div>
             <div>
                 <a href="/aboutUs">About Us</a>
             </div>
             <div>
-                <a href="/policyBrief">Policy Brief</a>
+                <a href="{{ route('policy.show') }}">Policy Brief</a>
             </div>
 
         </div>

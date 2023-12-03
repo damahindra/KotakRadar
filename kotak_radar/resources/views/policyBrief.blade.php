@@ -22,7 +22,7 @@
                 <a href="/kuis">Kuis</a>
             </div>
             <div>
-                <a href="/mail">Kotak Surat</a>
+                <a href="{{ route('mail.show') }}">Kotak Surat</a>
             </div>
             <div>
                 <a href="/aboutUs">About Us</a>
@@ -33,13 +33,21 @@
 
         </div>
         <div class="nav-right-content">
+            @if($user)
             <div>
                 <a href="/logout">Logout</a>
             </div>
             <div class="name">
-                <p>Selamat Datang, Shani Indira</p>
+                <p>Selamat Datang, {{ $user->name }}</p>
             </div>
-
+            @else
+            <div>
+                <a href="{{ route('login.show') }}">Login</a>
+            </div>
+            <div class="name">
+                <p>Selamat Datang!</p>
+            </div>
+            @endif
         </div>
     </nav>
         </header>

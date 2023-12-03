@@ -63,9 +63,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         ]);
     });
 
-    Route::get('/policyBrief', function () {
-        return view('policyBrief');
-    });
+    Route::get('/policyBrief', 'PolicyController@index')->name('policy.show');
 
     Route::get('/tataCara', function () {
         return view('tataCara');

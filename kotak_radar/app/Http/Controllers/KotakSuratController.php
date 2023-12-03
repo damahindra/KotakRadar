@@ -12,7 +12,10 @@ class KotakSuratController extends Controller
 {
     // show all mails
     public function openMail() {
-        return view('kotakSurat');
+        if (auth()->user()) {
+            return view('kotakSurat');
+        }
+        return redirect(route('login.show'));
     }
 
     // show view to post mail
@@ -45,10 +48,13 @@ class KotakSuratController extends Controller
 
     public function fetch() {
         $user = auth()->user();
-        $posts = Post::where('user_id', auth()->user()->id)->get();
-        return view('kotakSurat', [
-            'posts' => $posts,
-            'user' => $user
-        ]);
+        if($user) {
+            $posts = Post::where('user_id', auth()->user()->id)->get();
+            return view('kotakSurat', [
+                'posts' => $posts,
+                'user' => $user
+            ]);
+        }
+        return redirect(route('login.show'));
     }
 }
