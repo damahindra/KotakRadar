@@ -61,7 +61,7 @@
         </div>
 
         @php
-        $folderPath = public_path('images\tata-cara');
+        $folderPath = public_path('images/tata-cara');
 
         // Get all files in the folder
         $files = File::files($folderPath);
