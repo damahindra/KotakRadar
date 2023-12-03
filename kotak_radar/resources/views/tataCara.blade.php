@@ -61,25 +61,31 @@
         </div>
 
         @php
-        $folderPath = public_path('images/tata-cara');
-
-        // Get all files in the folder
-        $files = File::files($folderPath);
+        $files = [asset('images/tata-cara/1.png'),
+                        asset('images/tata-cara/2.png'),
+                        asset('images/tata-cara/3.png'),
+                        asset('images/tata-cara/4.png'),
+                        asset('images/tata-cara/5.png'),
+                        asset('images/tata-cara/6.png'),
+                        asset('images/tata-cara/7.png'),
+                        asset('images/tata-cara/8.png'),
+                        asset('images/tata-cara/9.png')];
         @endphp
 
         <div class="main">
     <ul class="cards">
       @foreach ($files as $file)
       @php
-          $fileName = pathinfo($file, PATHINFO_FILENAME) . '.png';
-          if(pathinfo($file, PATHINFO_FILENAME) . '.png' == $picture) {
+          if($file == $picture) {
             continue;
           }
       @endphp
         <li class="cards_item">
           <div class="card">
             <div class="card_image">
-              <a href="{{ route('tatacara.show', ['picture' => $fileName]) }}"><img src="{{ asset('images/tata-cara/' . $fileName) }}"></a>
+              <a href="{{ route('tatacara.show', ['picture' => substr($file, -5)]) }}">
+                <img src="{{ $file }}">
+            </a>
             </div>
           </div>
         </li>
